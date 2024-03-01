@@ -128,7 +128,10 @@ submitBtn.addEventListener("click", function () {
       monthResult = 11;
       yearResult--;
     }
-    if (yearResult < 0) {
+    if (Number(yearValue) === year) {
+      yearResult = 0;
+      monthResult = 0;
+    } else if (yearResult < 0) {
       yearResult = yearResult * -1;
     } else if (yearResult <= 1) {
       monthResult--;
